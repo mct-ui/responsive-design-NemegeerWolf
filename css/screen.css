@@ -502,6 +502,27 @@ a:focus {
 }
 
 /*
+    Component: Title icon
+    ---
+    Special type of title with icon
+*/
+
+.c-title-icon {
+  display: flex;
+  gap: 24px;
+}
+
+.c-title-icon__icon {
+  height: 5em;
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+}
+
+/*
     Component: Lead
     ---
     Lead type treatments to style everything that differs from standard typography elements
@@ -644,12 +665,24 @@ a:focus {
 */
 
 .c-footer {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .c-footer__logo {
+  width: 100%;
 }
 
 .c-footer__nav {
+  justify-content: space-around;
+  width: 50%;
+}
+
+.c-footer__list {
+  text-align: center;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: 768px) {
@@ -657,23 +690,41 @@ a:focus {
   }
 
   .c-footer__logo {
+    text-align: center;
   }
 
   .c-footer__nav {
+  }
+
+  .c-footer__list {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    flex-direction: row;
+
+    /* justify-content: space-between;
+    align-content: space-between;
+    align-items: center; */
   }
 }
 
 @media (min-width: 992px) {
   .c-footer {
+    justify-content: space-between;
   }
 
   .c-footer__logo {
+    width: 20%;
+    order: 1;
   }
 
   .c-footer__logo .c-logo {
   }
 
   .c-footer__nav {
+    order: 0;
+    width: 30%;
   }
 }
 
@@ -686,6 +737,15 @@ a:focus {
     ---
     Utility classes to put specific max widths onto elements
 */
+.u-order_1-bp-3 {
+  order: 1;
+}
+.u-order_2-bp-3 {
+  order: 2;
+}
+.u-order_3-bp-3 {
+  order: 3;
+}
 
 .u-max-width-xs {
   max-width: 18em !important;
